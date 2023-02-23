@@ -1,11 +1,11 @@
 public class RandomWalker {
     public static void main(String[] args) {
         int r = Integer.parseInt(args[0]);
-        int cnt = 0;
-        int manhattanDistance = -1;
+        long cnt = 0;
+        long manhattanDistance = -1;
 //        Starting Co-ordinates
-        int x = 0;
-        int y = 0;
+        long x = 0;
+        long y = 0;
         while (manhattanDistance != r) {
             int randomDirection = (int) (Math.random() * 4);
             if (randomDirection == 0) {
