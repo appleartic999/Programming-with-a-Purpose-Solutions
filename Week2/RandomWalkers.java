@@ -4,12 +4,14 @@ public class RandomWalkers {
         int trials = Integer.parseInt(args[1]);
         long sumOfSteps = 0;
         for (int i = 0; i < trials; i++) {
-            long manhattenDistance = -1;
+            long manhattanDistance = -1;
 //            Starting co-ordinte points
             long x = 0;
             long y = 0;
             long cnt = 0;
-            while (manhattenDistance != r) {
+            while (true) {
+                manhattanDistance = Math.abs(x) + Math.abs(y);
+                if (manhattanDistance == r) break;
                 int randomDirection = (int) (Math.random() * 4);
                 if (randomDirection == 0) {
                     x++;
@@ -21,7 +23,6 @@ public class RandomWalkers {
                     y--;
                 }
                 cnt++;
-                manhattenDistance = Math.abs(x) + Math.abs(y);
             }
             sumOfSteps += cnt;
         }

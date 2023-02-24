@@ -6,7 +6,10 @@ public class RandomWalker {
 //        Starting Co-ordinates
         long x = 0;
         long y = 0;
-        while (manhattanDistance != r) {
+        System.out.println("(" + x + ", " + y + ")");
+        while (true) {
+            manhattanDistance = Math.abs(x) + Math.abs(y);
+            if (manhattanDistance == r) break;
             int randomDirection = (int) (Math.random() * 4);
             if (randomDirection == 0) {
                 x++;
@@ -17,9 +20,8 @@ public class RandomWalker {
             } else {
                 y--;
             }
-            System.out.println("(" + x + " " + y + ")");
+            System.out.println("(" + x + ", " + y + ")");
             cnt++;
-            manhattanDistance = Math.abs(x) + Math.abs(y);
         }
         System.out.println("steps = " + cnt);
     }
