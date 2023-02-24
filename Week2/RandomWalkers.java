@@ -1,7 +1,7 @@
 public class RandomWalkers {
     public static void main(String[] args) {
-        long r = Long.parseLong(args[0]);
-        long trials = Long.parseLong(args[1]);
+        int r = Integer.parseInt(args[0]);
+        int trials = Integer.parseInt(args[1]);
         long sumOfSteps = 0;
         for (int i = 0; i < trials; i++) {
             long manhattenDistance = -1;
